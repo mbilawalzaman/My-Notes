@@ -5,7 +5,9 @@
 //const Sum = Add(2, 2);
 //console.log("Total: ", Sum);
 
+const validator = require("validator");
 const getNotes = require("./notes.js");
 const myNotes = getNotes();
 
 console.log(myNotes);
+console.log(validator.isURL("https://mead.io"));

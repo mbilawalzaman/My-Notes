@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mbilawalzaman/My-Notes/issues"
   },
-  "homepage": "https://github.com/mbilawalzaman/My-Notes#readme"
+  "homepage": "https://github.com/mbilawalzaman/My-Notes#readme",
+  "dependencies": {
+    "validator": "^10.8.0"
+  }
 }
