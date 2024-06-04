@@ -65,23 +65,30 @@ yargs.command({
   },
 });
 
-// create list command
+// Get all list of title of command
 
 yargs.command({
   command: "list",
   describe: "list your note",
-  handler: function () {
-    console.log("listing out all notes");
+  handler: function (argv) {
+    notes.listNotes(argv.title);
   },
 });
 
-// create read command
+// Get single note title of command
 
 yargs.command({
   command: "read",
-  describe: "Read a note",
-  handler: function () {
-    console.log("Reading a note");
+  describe: "list your note",
+  builder: {
+    title: {
+      describe: "Note title",
+      demandOption: true,
+      type: "string",
+    },
+  },
+  handler: function (argv) {
+    notes.getNote(argv.title);
   },
 });
 
